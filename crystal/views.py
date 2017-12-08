@@ -17,7 +17,6 @@ SCRIPT_DIR = settings.SCRIPT_DIR
 def index(request):
     if not exists(WORK_DIR):
         os.mkdir(WORK_DIR)
-    os.chmod(WORK_DIR, 0o777)
     if request.method == 'POST':
         form = CrystalForm(request.POST)
         if form.is_valid():
