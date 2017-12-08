@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Miller Set Builder</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="/static/crystal/css/crystal.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Xuanxuan's Site</a>
+</nav>
+
+
+<div class="start-template">
+    <div class="simple-title text-center">
+        <h1>Miller Set Builder</h1>
+        <p>Generate miller set for given space group and unit cell parameters.<br>
+            Powered by <a href="http://cctbx.sourceforge.net">cctbx</a></p>
+    </div>
+
+
+    <div class="container" style="width:80%">
+        <form action="." method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="space_group">Space Group</label>
+                <div>
+                    <input type="text" class="form-control" id="space_group" placeholder="e.g. P222" name="space_group">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-12">Unit Cell Parameters(angstrom, degree)</label>
+                <div class="col-sm-2">
+                    <input type="number" step="0.0001" class="form-control" id="a" placeholder="a" name="a">
+                </div>
+                <div class="col-sm-2">
+                    <input type="number" step="0.0001" class="form-control" id="b" placeholder="b" name="b">
+                </div>
+                <div class="col-sm-2">
+                    <input type="number" step="0.0001" class="form-control" id="c" placeholder="c" name="c">
+                </div>
+                <div class="col-sm-2">
+                    <input type="number" step="0.0001" class="form-control" id="alpha" placeholder="alpha" name="alpha">
+                </div>
+                <div class="col-sm-2">
+                    <input type="number" step="0.0001" class="form-control" id="beta" placeholder="beta" name="beta">
+                </div>
+                <div class="col-sm-2">
+                    <input type="number" step="0.0001" class="form-control" id="gamma" placeholder="gamma" name="gamma">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-12">Resolution Limit(angstrom)</label>
+                <div class="col-sm-6">
+                    <input type="number" step="0.01" class="form-control" id="low_res" placeholder="low res"
+                           name="low_res">
+                </div>
+                <div class="col-sm-6">
+                    <input type="number" step="0.01" class="form-control" id="high_res" placeholder="high res"
+                           name="high_res">
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <input type="submit" class="btn btn-primary"></input>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer class="fixed-bottom">
+    <div class="row">
+        <div class="col-md-12" align="center">
+            <p>Posted by: Xuanxuan Li</p>
+            <p>Any bugs? Contact <a href="mailto:lixx11@csrc.ac.cn">lixx11@csrc.ac.cn</a>.</p>
+        </div>
+    </div>
+</footer>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script language="javascript" type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+<script language="javascript" type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+<script language="javascript" type="text/javascript" src="/static/crystal/js/sketch.js"></script>
+<script language="javascript" type="text/javascript" src="/static/crystal/js/box.js"></script>
+</body>
+</html>

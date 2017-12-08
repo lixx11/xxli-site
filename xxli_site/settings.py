@@ -119,3 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# custom settings
+WORK_DIR = '/tmp/xxli-site/'
+CCTBX_ENV = '/Applications/cctbx-dev-1209/cctbx_env.sh'
+SCRIPT_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'scripts')
