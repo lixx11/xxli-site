@@ -21,7 +21,7 @@ ms = miller.build_set(
     crystal_symmetry=crystal.symmetry(
         space_group_symbol=space_group,
         unit_cell=(a,b,c,alpha,beta,gamma)),
-    anomalous_flag=False,
+    anomalous_flag=True,
     d_min=high_res,
     d_max=low_res,
     )
