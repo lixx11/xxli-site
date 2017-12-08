@@ -1,3 +1,5 @@
+# added by xxli
+static/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
